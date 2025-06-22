@@ -1,0 +1,29 @@
+{
+  "name": "recipe-app-mern",
+  "version": "1.0.0",
+  "description": "A MERN stack recipe finder application",
+  "main": "index.js",
+  "scripts": {
+    "setup": "echo 'Please create a .env file in the /backend folder and add your MONGO_URI, SPOONACULAR_API_KEY, and JWT_SECRET. Then, create a .env file in the /frontend folder and add PORT=3001'",
+    "server": "nodemon backend/server.js",
+    "client": "cross-env PORT=3001 npm start --prefix frontend",
+    "dev": "echo 'Starting the application... Make sure you have run the setup first.' && concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [
+    "mern",
+    "react",
+    "node",
+    "recipe"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^7.0.0",
+    "cross-env": "^7.0.3",
+    "kill-port": "^2.0.1",
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "jwt-decode": "^4.0.0"
+  }
+}
